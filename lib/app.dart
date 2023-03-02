@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:movie_app/screens/home/home_page.dart';
 
-import 'pages/home/view/view.dart';
+
 
 class MainApp extends StatelessWidget {
   const MainApp({Key? key}) : super(key: key);
