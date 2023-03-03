@@ -8,7 +8,8 @@ class ColorManager {
   static Color inputColor = HexColor.fromHex("#67686D");
   static Color inputColor2 = HexColor.fromHex("#3A3F47");
   static Color iconGray = HexColor.fromHex("#67686D");
-  static Color textGray = HexColor.fromHex("#67686D");
+  static Color textGray = HexColor.fromHex("#242A32");
+  static Color blue = HexColor.fromHex("#0296E5");
 }
 
 /// this is a function which takes the string value of hex and formats it into hexadecimal value
