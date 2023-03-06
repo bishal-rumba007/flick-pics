@@ -43,7 +43,7 @@ const List<Movie> movieTabs = [
   ),
   Movie(
     id: 5,
-    poster: 'https://cdn.shopify.com/s/files/1/0057/3728/3618/products/shangchi_and_the_legend_of_the_ten_rings_500x.jpg?v=1622220347',
+    poster: 'https://www.filmjabber.com/movie-poster-thumbs/fantastic-beasts-the-secrets-of-dumbledore-movie-poster-6857.jpg',
   ),
   Movie(
     id: 6,
