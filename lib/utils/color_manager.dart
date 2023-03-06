@@ -10,6 +10,8 @@ class ColorManager {
   static Color iconGray = HexColor.fromHex("#67686D");
   static Color textGray = HexColor.fromHex("#242A32");
   static Color blue = HexColor.fromHex("#0296E5");
+  static Color transparent = HexColor.fromHex("#252836").withOpacity(0.45);
+  static Color detailText = HexColor.fromHex("#92929D");
 }
 
 /// this is a function which takes the string value of hex and formats it into hexadecimal value
