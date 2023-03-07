@@ -180,9 +180,73 @@ class _DetailPageState extends State<DetailPage> with SingleTickerProviderStateM
               child: TabBarView(
                 controller: _tabController,
                   children: [
-                    Text('From DC Comics comes the Suicide Squad, an antihero team of incarcerated supervillains who act as deniable assets for the United States government, undertaking high-risk black ops missions in exchange for commuted prison sentences.'),
-                    Text('From DC Comics comes the Suicide Squad, an antihero team of incarcerated supervillains who act as deniable assets for the United States government, undertaking high-risk black ops missions in exchange for commuted prison sentences.'),
-                    Text('From DC Comics comes the Suicide Squad, an antihero team of incarcerated supervillains who act as deniable assets for the United States government, undertaking high-risk black ops missions in exchange for commuted prison sentences.'),
+                    const Text('From DC Comics comes the Suicide Squad, an antihero team of incarcerated supervillains who act as deniable assets for the United States government, undertaking high-risk black ops missions in exchange for commuted prison sentences.'),
+                    ListView.builder(
+                      physics: const BouncingScrollPhysics(),
+                      itemCount: 3,
+                      itemBuilder: (context, index) {
+                        return Container(
+                          margin: const EdgeInsets.only(bottom: 20),
+                          child: Row(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Column(
+                                children: [
+                                  const CircleAvatar(
+                                    backgroundColor: Colors.amberAccent,
+                                    radius: 36,
+                                    child: Icon(Icons.person, color: Colors.white, size: 50,),
+                                  ),
+                                  const SizedBox(height: 15,),
+                                  Text('6.6', style: getMediumStyle(color: ColorManager.blue, fontSize: 14),)
+                                ],
+                              ),
+                              const SizedBox(width: 15,),
+                              Expanded(
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text('John Doe', style: getMediumStyle(color: Colors.white, fontSize: 14),),
+                                    const SizedBox(height: 5,),
+                                    Text('From DC Comics comes the Suicide Squad, an antihero team of incarcerated supervillains who act as deniable assets for the United States government.',
+                                      style: getRegularStyle(color: Colors.white, fontSize: 13),
+                                    ),
+                                  ],
+                                ),
+                              )
+                            ],
+                          ),
+                        );
+                      },
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                      child: GridView.builder(
+                          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                            crossAxisCount: 2,
+                            mainAxisSpacing: 15,
+                            crossAxisSpacing: 55,
+                            childAspectRatio: 1.02,
+                          ),
+                          itemCount: 6,
+                          itemBuilder: (context, index) {
+                            return Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                const SizedBox(
+                                  height: 86,
+                                  width: 86,
+                                  child: CircleAvatar(
+                                    backgroundColor: Colors.white,
+                                  ),
+                                ),
+                                Text('Benedict Cumberbatch', style: getMediumStyle(color: Colors.white, fontSize: 14), textAlign: TextAlign.center,)
+                              ],
+                            );
+                          },
+                      ),
+                    )
                   ]
               ),
             ),
