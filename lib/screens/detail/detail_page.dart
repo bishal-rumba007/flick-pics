@@ -74,7 +74,7 @@ class _DetailPageState extends State<DetailPage> with SingleTickerProviderStateM
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       const Icon(Icons.star_border_outlined, color: Colors.orange,),
-                      Text('9.5', style: getSemiBoldStyle(color: Colors.orange, fontSize: 14),)
+                      Text('9.5', style: getMediumStyle(color: Colors.orange, fontSize: 18),)
                     ],
                   ),
                 ),
