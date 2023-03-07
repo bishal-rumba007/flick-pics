@@ -1,8 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:movie_app/screens/home/home_page.dart';
 
 
-class SplashPage extends StatelessWidget {
+class SplashPage extends StatefulWidget {
   const SplashPage({Key? key}) : super(key: key);
+
+  @override
+  State<SplashPage> createState() => _SplashPageState();
+}
+
+class _SplashPageState extends State<SplashPage> {
+  @override
+  void initState() {
+    super.initState();
+    Future.delayed(const Duration(seconds: 2)).then((value) => Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => const HomePage(),)));
+  }
 
   @override
   Widget build(BuildContext context) {

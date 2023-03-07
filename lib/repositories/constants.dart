@@ -43,7 +43,7 @@ const List<Movie> movieTabs = [
   ),
   Movie(
     id: 5,
-    poster: 'https://www.filmjabber.com/movie-poster-thumbs/fantastic-beasts-the-secrets-of-dumbledore-movie-poster-6857.jpg',
+    poster: 'https://cdn.marvel.com/content/1x/snh_online_6072x9000_posed_01.jpg',
   ),
   Movie(
     id: 6,

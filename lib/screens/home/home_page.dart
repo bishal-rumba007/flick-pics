@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:movie_app/screens/detail/detail_page.dart';
+import 'package:movie_app/screens/watch_list/watch_list_page.dart';
 import 'package:movie_app/utils/device_size.dart';
 
 import '../../repositories/constants.dart';
@@ -111,11 +113,16 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
                               right: 0.008 * w,
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(16),
-                                child: Image.network(
-                                  movie.poster,
-                                  height: 0.25 * h,
-                                  width: 0.36 * w,
-                                  fit: BoxFit.fitWidth,
+                                child: GestureDetector(
+                                  onTap: () {
+                                    Navigator.push(context, MaterialPageRoute(builder: (context) => const WatchListPage(),));
+                                  },
+                                  child: Image.network(
+                                    movie.poster,
+                                    height: 0.25 * h,
+                                    width: 0.36 * w,
+                                    fit: BoxFit.fitWidth,
+                                  ),
                                 ),
                               ),
                             ),
@@ -225,7 +232,12 @@ class CustomTabBar extends StatelessWidget {
             final movieItem = movieTabs[index];
             return ClipRRect(
               borderRadius: BorderRadius.circular(16),
-                child: Image(image: NetworkImage(movieItem.poster),
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => const DetailPage()));
+                  },
+                  child: Image(image: NetworkImage(movieItem.poster),
+                  ),
                 ),
             );
           },

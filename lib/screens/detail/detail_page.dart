@@ -34,7 +34,9 @@ class _DetailPageState extends State<DetailPage> with SingleTickerProviderStateM
         centerTitle: true,
         elevation: 0,
         leading: IconButton(
-            onPressed: (){},
+            onPressed: (){
+              Navigator.pop(context);
+            },
             icon: const Icon(Icons.arrow_back_ios_new_rounded, color: Colors.white, size: 28,)
         ),
         title: Text('Detail', style: getSemiBoldStyle(color: Colors.white, fontSize: 18),),
