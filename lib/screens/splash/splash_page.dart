@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:movie_app/screens/home/home_page.dart';
+import 'package:movie_app/utils/device_size.dart';
 
 
 class SplashPage extends StatefulWidget {
@@ -18,12 +19,14 @@ class _SplashPageState extends State<SplashPage> {
 
   @override
   Widget build(BuildContext context) {
+    final h = DeviceSize.height;
+    final w = DeviceSize.width;
     return Scaffold(
       backgroundColor: const Color(0xff242A32),
       body: Center(
         child: SizedBox(
-          height: 190,
-          width: 190,
+          height: h * 0.19,
+          width: w * 0.38,
           child: Image.asset("assets/images/splash.png", fit: BoxFit.cover),
         ),
       ),
