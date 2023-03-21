@@ -4,9 +4,11 @@
 class MovieFakeModel{
   final int id;
   final String poster;
+  String? movieName;
 
-  const MovieFakeModel({
+  MovieFakeModel({
     required this.id,
+    this.movieName,
     required this.poster,
   });
 }
