@@ -1,6 +1,6 @@
 
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import '../models/movie_state.dart';
+import '../features/home/domain/model/movie_state.dart';
 import '../services/movie_service.dart';
 
 

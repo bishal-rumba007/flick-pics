@@ -8,7 +8,7 @@ import 'package:hive_flutter/hive_flutter.dart';
 
 import '../api.dart';
 import '../api_exception.dart';
-import '../models/movie.dart';
+import '../features/home/domain/model/movie.dart';
 
 class MovieService{
   static  Future<Either<String, List<Movie>>> getMovieByCategory ({required String apiPath, required int page}) async{

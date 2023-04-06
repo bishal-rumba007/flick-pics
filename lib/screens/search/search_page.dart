@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:movie_app/models/movie.dart';
+import 'package:movie_app/features/home/domain/model/movie.dart';
 import 'package:movie_app/repositories/constants.dart';
 import 'package:movie_app/utils/device_size.dart';
 import 'package:movie_app/utils/style_manager.dart';

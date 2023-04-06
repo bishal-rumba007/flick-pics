@@ -1,4 +1,4 @@
-import '../models/movie.dart';
+import '../features/home/domain/model/movie.dart';
 
 List<MovieFakeModel> movieList = [
   MovieFakeModel(

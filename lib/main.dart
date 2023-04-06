@@ -1,3 +1,4 @@
+import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 
 import 'app.dart';
@@ -6,5 +7,10 @@ import 'app.dart';
 
 void main(){
   WidgetsFlutterBinding.ensureInitialized();
-  runApp(const MainApp());
+  runApp(
+    DevicePreview(
+      enabled: true,
+      builder: (context) => const MainApp(),
+    ),
+  );
 }
