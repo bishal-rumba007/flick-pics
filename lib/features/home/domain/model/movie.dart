@@ -34,12 +34,12 @@ class Movie {
   }
 
   Map<String, dynamic> toJson() {
-    final _data = <String, dynamic>{};
-    _data['page'] = page;
-    _data['results'] = results.map((e)=>e.toJson()).toList();
-    _data['total_pages'] = totalPages;
-    _data['total_results'] = totalResults;
-    return _data;
+    final data = <String, dynamic>{};
+    data['page'] = page;
+    data['results'] = results.map((e)=>e.toJson()).toList();
+    data['total_pages'] = totalPages;
+    data['total_results'] = totalResults;
+    return data;
   }
 }
 
@@ -85,18 +85,18 @@ class Results {
   }
 
   Map<String, dynamic> toJson() {
-    final _data = <String, dynamic>{};
-    _data['backdrop_path'] = backdropPath;
-    _data['genre_ids'] = genreIds;
-    _data['id'] = id;
-    _data['original_language'] = originalLanguage;
-    _data['overview'] = overview;
-    _data['popularity'] = popularity;
-    _data['poster_path'] = posterPath;
-    _data['release_date'] = releaseDate;
-    _data['title'] = title;
-    _data['vote_average'] = voteAverage;
-    _data['vote_count'] = voteCount;
-    return _data;
+    final data = <String, dynamic>{};
+    data['backdrop_path'] = backdropPath;
+    data['genre_ids'] = genreIds;
+    data['id'] = id;
+    data['original_language'] = originalLanguage;
+    data['overview'] = overview;
+    data['popularity'] = popularity;
+    data['poster_path'] = posterPath;
+    data['release_date'] = releaseDate;
+    data['title'] = title;
+    data['vote_average'] = voteAverage;
+    data['vote_count'] = voteCount;
+    return data;
   }
 }
