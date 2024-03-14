@@ -7,7 +7,7 @@ import 'package:movie_app/features/home/domain/service/movie_service.dart';
 
 class MovieProvider extends StateNotifier<MovieState>{
   MovieProvider(super.state){
-    
+    getMovieData();
   }
   
   Future<void> getMovieData() async{
@@ -34,6 +34,4 @@ class MovieProvider extends StateNotifier<MovieState>{
     state = state.copyWith(movieState: state, apiPath: apiPath, movies: [], isLoadMore: false, page: 1);
     getMovieData();
   }
-  
-  
 }
